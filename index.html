@@ -56,8 +56,9 @@
 				</div>
 			</section>
 
+<hr>
 		<!-- Two -->
-			<section id="two" class="main style2">
+			<section id="two" class="main style1">
 				<div class="container" align="middle" style="position:static;">
 
 						<div class="6u$ 12u$(medium)">
@@ -102,30 +103,30 @@
 							</div>
 					</div>
 				</div>
-				<div class="test" align="middle" style="position:static; height: 100%; width: 100%; top:0;left 100%;">
-				<img src="images/test123.png" alt="" style="width: 100%; max-width: 1000px; padding-bottom: 10px; border-radius: 25px;
-" align="middle"/>
+				<div>
+					<canvas id="myChart" width="400" height="400"></canvas
 				</div>
 			</section>
+
+<hr>
 
 		<!-- Three -->
 			<section id="three" class="main style1 special">
 				<div class="container">
 					<header class="major">
-						<h2>Different Type of Crime in ACT</h2>
+						<h2>Different Type of Crime's in ACT</h2>
 					</header>
-					<p>Click Buttons Below for Different Data's</p>
-					<canvas id="myChart" width="200" height="200"></canvas>
+					<p>Here are some more stats on Crimes in ACT</p>
 
 					<script>
 					var ctx = document.getElementById("myChart").getContext('2d');
 					var myChart = new Chart(ctx, {
 					    type: 'bar',
 					    data: {
-					        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+					        labels: ["June - 16", "September - 16", "December - 16", "March - 17", "April - 17", "Anticipated"],
 					        datasets: [{
-					            label: '# of Votes',
-					            data: [12, 19, 3, 5, 2, 3],
+					            label: 'Crimes Per Year',
+					            data: [2100, 2200, 2100, 2300, 2400, 2600],
 					            backgroundColor: [
 					                'rgba(255, 99, 132, 0.2)',
 					                'rgba(54, 162, 235, 0.2)',
@@ -160,6 +161,55 @@
 				</div>
 			</section>
 
+			<hr>
+
+			<section id="four" class="main style2">
+				<div class="container">
+
+					<canvas id="chartTable2" width="400" height="400"></canvas
+
+						<script>
+						var ctx = document.getElementById("chartTable2").getContext('2d');
+						var myChart = new Chart(ctx, {
+						    type: 'bar',
+						    data: {
+						        labels: ["June - 16", "September - 16", "December - 16", "March - 17", "April - 17", "Anticipated"],
+						        datasets: [{
+						            label: 'Crimes Per Year',
+						            data: [2100, 2200, 2100, 2300, 2400, 2600],
+						            backgroundColor: [
+						                'rgba(255, 99, 132, 0.2)',
+						                'rgba(54, 162, 235, 0.2)',
+						                'rgba(255, 206, 86, 0.2)',
+						                'rgba(75, 192, 192, 0.2)',
+						                'rgba(153, 102, 255, 0.2)',
+						                'rgba(255, 159, 64, 0.2)'
+						            ],
+						            borderColor: [
+						                'rgba(255,99,132,1)',
+						                'rgba(54, 162, 235, 1)',
+						                'rgba(255, 206, 86, 1)',
+						                'rgba(75, 192, 192, 1)',
+						                'rgba(153, 102, 255, 1)',
+						                'rgba(255, 159, 64, 1)'
+						            ],
+						            borderWidth: 1
+						        }]
+						    },
+						    options: {
+						        scales: {
+						            yAxes: [{
+						                ticks: {
+						                    beginAtZero:true
+						                }
+						            }]
+						        }
+						    }
+						});
+						</script>
+
+				</div>
+			</section>
 		<!-- Four -->
 			<section id="four" class="main style2 special">
 				<div class="container">
