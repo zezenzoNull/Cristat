@@ -25,7 +25,10 @@
 	  color: white;
 	}
 
-	
+	#map {
+        height: 100%;
+      }
+
 	body {
 		line-height: 1;
 	}
