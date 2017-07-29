@@ -25,6 +25,13 @@
 	  color: white;
 	}
 
+	.imageee {
+
+		border-radius: 8px;
+		padding-bottom: 20px;
+
+	}
+
 	#map {
         height: 100%;
       }
@@ -2332,10 +2339,14 @@
 			display: block;
 			margin: 0 0 2em 0;
 			width: 100%;
+			border-radius: 8px;
+
 		}
 
 			.image.fit img {
 				width: 100%;
+				border-radius: 8px;
+
 			}
 
 /* List */
