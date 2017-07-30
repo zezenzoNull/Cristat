@@ -26,12 +26,21 @@
 	}
 
 	.imageee {
-		border-radius: 8px;
+		border-radius: 15px;
 		padding-bottom: 20px;
 		width: 50%;
 		height: 50%;
 
 	}
+
+	#four {
+
+		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+
+
+
+	}
+
 
 	#map {
         height: 100%;
