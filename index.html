@@ -1,326 +1,390 @@
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-		<title>Cristat</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js</script>
-	  <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js</script>
-		<script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js</script>
-		<script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js</script>
-		<script src="node_modules/chartjs/dist/Chart.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
-		<script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
-		<link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet'/>
-
-	</head>
-	<body>
-
-		<!-- Header -->
-			<section id="header">
-				<div class="inner">
-					<img src="images/robber-logo.png" alt="" />
-					<h1>Hi, I am <strong>CriStat</strong>, another fine<br />
-					project from zezenzo</h1>
-					<p>I am used to find Information about crimes in <strong>ACT</strong> and give you useful information about how to prevent them from happening and even if it does then how to correctly report it</p>
-					<ul class="actions">
-						<li><a href="#one" class="button scrolly">Summary</a></li>
-					</ul>
-				</div>
-			</section>
-
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row 150%">
-						<div class="6u 12u$(medium)">
-							<header class="major">
-								<h2><strong>Summary</strong><br />
-								Some Information about crimes in ACT</h2>
-							</header>
-							<p>In this report you will find information about t
-								<ul style="list-style-type:circle">
-  							<li>The Summation of Incidents and Offences</li>
-  							<li>Person Offences</li>
-  							<li>Property Offences</li>
-								<li>Other Offences</li>
-								<li>Restorative Justice</li>
-								<li>More information about crime based on Aboriginal and Torres Strait Islander</li>
-								</ul>
-
-							</p>
-						</div>
-						<div class="6u$ 12u$(medium) important(medium)">
-							<span class="image fit"><img src="images/logo1.png" alt="" /></span>
-						</div>
-						<ul class="actions">
-							<li><a href="#two" class="button scrolly">More info</a></li>
-						</ul>
-					</div>
-				</div>
-
-			</section>
-
-<hr>
-		<!-- Two -->
-			<section id="two" class="main style1" padding-top: !50px;>
-				<div class="container" align="middle" style="position:static;">
-
-						<div class="6u$ 12u$(medium)">
-							<header class="major">
-								<h2><strong>Table of Summary</strong><br />
-								Here is Are Stats about Crimes 2016-2017</h2>
-							</header>
-
-							<span align="right" height="200px" width="200px" class="image"><img src="images/handlol.png" alt="" /></span>
-
-<br />
-<hr>
-
-						<style type="text/css">
-						.tg  {border-collapse:collapse;border-spacing:0;}
-						.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-						.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-						.tg .tg-yw4l{vertical-align:top}
-						</style>
-
-						<br />
-						<div align="left">
-						<table class="tg">
-						  <tr>
-						    <th class="tg-031e">Offence or measure</th>
-						    <th class="tg-yw4l">Year to March 2016</th>
-						    <th class="tg-yw4l">Year to March 2017</th>
-						  </tr>
-						  <tr>
-						    <td class="tg-yw4l">Reported total incidents</td>
-						    <td class="tg-yw4l">81,675</td>
-						    <td class="tg-yw4l">82,032</td>
-						  </tr>
-						  <tr>
-						    <td class="tg-yw4l">Person Offences</td>
-						    <td class="tg-yw4l">3,093</td>
-						    <td class="tg-yw4l">3,664</td>
-						  </tr>
-						  <tr>
-						    <td class="tg-yw4l">Property Offences</td>
-						    <td class="tg-yw4l">21,862</td>
-						    <td class="tg-yw4l">20,436</td>
-						  </tr>
-						</table>
-					</div>
-							</div>
-					</div>
-				</div>
-				<div>
-					<canvas id="myChart" width="300" height="800"></canvas
-				</div>
-			</section>
-
-<hr>
-
-		<!-- Three -->
-			<section id="header" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Different Type of Crime's in ACT</h2>
-					</header>
-					<p>Here are some more stats on Crimes in ACT</p>
+<head>
+	<title>Cristat</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js</script>
+		<script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js</script>
+			<script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js</script>
+				<script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js</script>
+					<script src="node_modules/chartjs/dist/Chart.js"></script>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+					<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+					<script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+					<link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet'/>
+					<link rel="shortcut icon" href="TemplateData/favicon.ico">
+					<link rel="stylesheet" href="TemplateData/style.css">
+					<script src="TemplateData/UnityProgress.js"></script>
+					<script src="Build/UnityLoader.js"></script>
+					<script src="https://d3js.org/d3.v4.min.js"></script>
 
 					<script>
-					var ctx = document.getElementById("myChart").getContext('2d');
-					var myChart = new Chart(ctx, {
-					    type: 'bar',
-					    data: {
-					        labels: ["June - 16", "September - 16", "December - 16", "March - 17", "April - 17", "Anticipated"],
-					        datasets: [{
-					            label: 'Crimes Per Year',
-					            data: [2100, 2200, 2100, 2300, 2400, 2600],
-					            backgroundColor: [
-					                'rgba(255, 99, 132, 0.2)',
-					                'rgba(54, 162, 235, 0.2)',
-					                'rgba(255, 206, 86, 0.2)',
-					                'rgba(75, 192, 192, 0.2)',
-					                'rgba(153, 102, 255, 0.2)',
-					                'rgba(255, 159, 64, 0.2)'
-					            ],
-					            borderColor: [
-					                'rgba(255,99,132,1)',
-					                'rgba(54, 162, 235, 1)',
-					                'rgba(255, 206, 86, 1)',
-					                'rgba(75, 192, 192, 1)',
-					                'rgba(153, 102, 255, 1)',
-					                'rgba(255, 159, 64, 1)'
-					            ],
-					            borderWidth: 1
-					        }]
-					    },
-					    options: {
-					        scales: {
-					            yAxes: [{
-					                ticks: {
-					                    beginAtZero:true
-					                }
-					            }]
-					        }
-					    }
-					});
+					var gameInstance = UnityLoader.instantiate("gameContainer", "Build/CristatData.json", {onProgress: UnityProgress});
 					</script>
 
-				</div>
-			</section>
+				</head>
+				<body>
+
+					<!-- Header -->
+					<section id="header">
+						<div class="inner">
+							<img src="images/robber-logo.png" alt="" />
+							<h1>Hi, I am <strong>CriStat</strong>, another fine<br />
+								project from zezenzo</h1>
+								<p>I am used to find Information about crimes in <strong>ACT</strong> and give you useful information about how to prevent them from happening and even if it does then how to correctly report it</p>
+								<ul class="actions">
+									<li><a href="#one" class="button scrolly">Summary</a></li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- One -->
+						<section id="one" class="main style1">
+							<div class="container">
+								<div class="row 150%">
+									<div class="6u 12u$(medium)">
+										<header class="major">
+											<h2><strong>Summary</strong><br />
+												Some Information about crimes in ACT</h2>
+											</header>
+											<p>In this report you will find information about t
+												<ul style="list-style-type:circle">
+													<li>The Summation of Incidents and Offences</li>
+													<li>Person Offences</li>
+													<li>Property Offences</li>
+													<li>Other Offences</li>
+													<li>Restorative Justice</li>
+													<li>More information about crime based on Aboriginal and Torres Strait Islander</li>
+												</ul>
+
+											</p>
+										</div>
+										<div class="6u$ 12u$(medium) important(medium)">
+											<span class="image fit"><img src="images/logo1.png" alt="" /></span>
+										</div>
+										<ul class="actions">
+											<li><a href="#two" class="button scrolly">More info</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</section>
+
+							<hr>
+							<!-- Two -->
+							<section id="two" class="main style1" padding-top: !50px;>
+								<div class="container" align="middle" style="position:static;">
+
+									<div class="6u$ 12u$(medium)">
+										<header class="major">
+											<h2><strong>Table of Summary</strong><br />
+												Here is Are Stats about Crimes 2016-2017</h2>
+											</header>
+
+											<span align="right" height="200px" width="200px" class="image"><img src="images/handlol.png" alt="" /></span>
+
+											<br />
+											<hr>
+
+											<style type="text/css">
+											.tg  {border-collapse:collapse;border-spacing:0;}
+											.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+											.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+											.tg .tg-yw4l{vertical-align:top}
+											</style>
+
+											<br />
+											<div align="left">
+												<table class="tg">
+													<tr>
+														<th class="tg-031e">Offence or measure</th>
+														<th class="tg-yw4l">Year to March 2016</th>
+														<th class="tg-yw4l">Year to March 2017</th>
+													</tr>
+													<tr>
+														<td class="tg-yw4l">Reported total incidents</td>
+														<td class="tg-yw4l">81,675</td>
+														<td class="tg-yw4l">82,032</td>
+													</tr>
+													<tr>
+														<td class="tg-yw4l">Person Offences</td>
+														<td class="tg-yw4l">3,093</td>
+														<td class="tg-yw4l">3,664</td>
+													</tr>
+													<tr>
+														<td class="tg-yw4l">Property Offences</td>
+														<td class="tg-yw4l">21,862</td>
+														<td class="tg-yw4l">20,436</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+
+<hr>
+<br />
+
+									<canvas id="myChart" width="300" height="800"></canvas
+									</div>
+								</section>
+
+								<hr>
+
+								<!-- Three -->
+								<section id="header" class="main style1 special">
+									<div class="container">
+										<header class="major">
+											<h2>Different Type of Crime's in ACT</h2>
+										</header>
+										<p>Here are some more stats on Crimes in ACT</p>
+
+										<script>
+										var ctx = document.getElementById("myChart").getContext('2d');
+										var myChart = new Chart(ctx, {
+											type: 'bar',
+											data: {
+												labels: ["June - 16", "September - 16", "December - 16", "March - 17", "April - 17", "Anticipated"],
+												datasets: [{
+													label: 'Crimes Per Year',
+													data: [2100, 2200, 2100, 2300, 2400, 2600],
+													backgroundColor: [
+														'rgba(255, 99, 132, 0.2)',
+														'rgba(54, 162, 235, 0.2)',
+														'rgba(255, 206, 86, 0.2)',
+														'rgba(75, 192, 192, 0.2)',
+														'rgba(153, 102, 255, 0.2)',
+														'rgba(255, 159, 64, 0.2)'
+													],
+													borderColor: [
+														'rgba(255,99,132,1)',
+														'rgba(54, 162, 235, 1)',
+														'rgba(255, 206, 86, 1)',
+														'rgba(75, 192, 192, 1)',
+														'rgba(153, 102, 255, 1)',
+														'rgba(255, 159, 64, 1)'
+													],
+													borderWidth: 1
+												}]
+											},
+											options: {
+												scales: {
+													yAxes: [{
+														ticks: {
+															beginAtZero:true
+														}
+													}]
+												}
+											}
+										});
+										</script>
+
+									</div>
+								</section>
 
 
 
-			<section id="four" class="main style2">
-				<div class="container">
+								<section id="four" class="main style2">
+									<div class="container">
 
-					<ul>
-				<li>Homicide and related offences</li>
-				<li>Acts intended to cause injury</li>
-				<li>Sexual assault and related offences</li>
-				<li>"Dangerous or negligent acts</li>
-				<li>endangering persons "</li>
-				<li>Abduction, harassment and other offences against the person</li>
-				<br />
-	<!--			<span class="image fit"><img src="images/homocide.png" alt="" /></span> -->
-				<br />
-				<li>Robbery, extortion and related offences</li>
-				<li>Unlawful entry with intent/burglary, break and enter</li>
-				<li>Theft and related offences</li>
-				<li>Fraud, deception and related offences</li>
-				<li>Property damage and environmental pollution</li>
-				<li>Motor vehicle theft</li>
-				<li>Bicycle theft</li>
-				<br />
-				<span class="image fit"><img src="images/theft.png" alt="" /></span>
-				<br />
-				<li>Illicit drug offences</li>
-				<li>Prohibited and regulated weapons and explosives offences</li>
-				<li>Public order offences</li>
-				<li>Traffic and vehicle regulatory offences</li>
-				<li>Offences against justice procedures, government security and government operations</li>
-				<li>Miscellaneous offences</li>
-				<br />
-				<span class="image fit"><img src="images/drugs.png" alt="" /></span>
-				<br />
-				<li>Young offendes referred to restorative justice</li>
-				<li>Adult offendes referred to restorative justice</li>
-				<li>All young people admissions to Bimberi</li>
-				<li>Custody days in Bimberi</li>
-				<li>All admissions to the Alexander Maconochie Centre</li>
-				<br />
-				<span class="image fit"><img src="images/young.png" alt="" /></span>
-				<br />
+										<ul>
+											<li>Homicide and related offences</li>
+											<li>Acts intended to cause injury</li>
+											<li>Sexual assault and related offences</li>
+											<li>"Dangerous or negligent acts</li>
+											<li>endangering persons "</li>
+											<li>Abduction, harassment and other offences against the person</li>
+											<br />
+											<!--			<span class="image fit"><img src="images/homocide.png" alt="" /></span> -->
+											<br />
+											<li>Robbery, extortion and related offences</li>
+											<li>Unlawful entry with intent/burglary, break and enter</li>
+											<li>Theft and related offences</li>
+											<li>Fraud, deception and related offences</li>
+											<li>Property damage and environmental pollution</li>
+											<li>Motor vehicle theft</li>
+											<li>Bicycle theft</li>
+											<br />
+											<span class="image fit"><img src="images/theft.png" alt="" /></span>
+											<br />
+											<li>Illicit drug offences</li>
+											<li>Prohibited and regulated weapons and explosives offences</li>
+											<li>Public order offences</li>
+											<li>Traffic and vehicle regulatory offences</li>
+											<li>Offences against justice procedures, government security and government operations</li>
+											<li>Miscellaneous offences</li>
+											<br />
+											<span class="image fit"><img src="images/drugs.png" alt="" /></span>
+											<br />
+											<li>Young offendes referred to restorative justice</li>
+											<li>Adult offendes referred to restorative justice</li>
+											<li>All young people admissions to Bimberi</li>
+											<li>Custody days in Bimberi</li>
+											<li>All admissions to the Alexander Maconochie Centre</li>
+											<br />
+											<span class="image fit"><img src="images/young.png" alt="" /></span>
+											<br />
 
-				<li>Incidents requiring patrols involving alcohol</li>
-				<li>Offences involving alcohol</li>
-				<li>Apprehensions involving alcohol</li>
-				<li>Charges involving alcohol</li>
-				<li>All Alcohol Diversion for Young people < 18</li>
-				<li>All protective custody for intoxication</li>
-				<li>All Drug Diversion</li>
-				<li>Random breath tests (RBT) conducted</li>
-				<li>Number of persons charged with drink driving</li>
-				<li>Random roadside drug tests (RRDT) conducted</li>
-				<li>RRDT Tests returning positive reading</li>
-				<li>All ACT alcohol-related ambulance attendances</li>
-				<li>All AOD behavioural disorders presenting to ACT Health Emergency Departments</li>
-				<li>Referrals to Sobering Up Shelter</li>
-				<br />
-				<span class="image fit"><img src="images/drink.png" alt="" /></span>
-				<br />
-				<li>New identified clients</li>
-				<li>Acts intended to cause injury - Domestic Violence</li>
-</ul>
+											<li>Incidents requiring patrols involving alcohol</li>
+											<li>Offences involving alcohol</li>
+											<li>Apprehensions involving alcohol</li>
+											<li>Charges involving alcohol</li>
+											<li>All Alcohol Diversion for Young people < 18</li>
+											<li>All protective custody for intoxication</li>
+											<li>All Drug Diversion</li>
+											<li>Random breath tests (RBT) conducted</li>
+											<li>Number of persons charged with drink driving</li>
+											<li>Random roadside drug tests (RRDT) conducted</li>
+											<li>RRDT Tests returning positive reading</li>
+											<li>All ACT alcohol-related ambulance attendances</li>
+											<li>All AOD behavioural disorders presenting to ACT Health Emergency Departments</li>
+											<li>Referrals to Sobering Up Shelter</li>
+											<br />
+											<span class="image fit"><img src="images/drink.png" alt="" /></span>
+											<br />
+											<li>New identified clients</li>
+											<li>Acts intended to cause injury - Domestic Violence</li>
+										</ul>
 
-				</div>
-			</section>
+									</div>
+								</section>
 
-		<!-- Four -->
-			<section id="five" class="main style1">
-				<div class="container">
-					<header class="major">
-						<h2>Here is a List where you can search Methods and tips on preventing Crime</h2>
-					</header>
-					<p>Search Here !</p>
-					<script>
-					var monkeyList = new List('test-list', {
-  				valueNames: ['name']
-					});</script>
+								<!-- Four -->
+								<section id="five" class="main style1">
+									<div class="container">
+										<header class="major">
+											<h2>Here is a List where you can search Methods and tips on preventing Crime</h2>
+										</header>
+										<p>Search Here !</p>
+										<script>
+										var monkeyList = new List('test-list', {
+											valueNames: ['name']
+										});</script>
 
-					<div id="test-list">
-						<input type="text" class="fuzzy-search" />
+										<div id="test-list">
+											<input type="text" class="fuzzy-search" />
 
-					 <P><ol><li ><p class="name"><strong>Work</strong> with public agencies and other organizations -- neighborhood-based or community-wide -- on solving common problems. </p></li> <li><strong> Make </strong> sure that all the youth in the neighborhood have positive ways to spend their spare time, through organized recreation, tutoring programs, part-time work, and volunteer opportunities. </li> <li><strong> Set up</strong> a <a href='http://www.ncpc.org/cms/cms-upload/ncpc/files/orgz.pdf'>Neighborhood Watch</a> or a community patrol, working with police. Make sure your streets and homes are well lighted. </li> <li><strong> Build </strong> a partnership with police, focused on solving problems instead of reacting to crises. Make it possible for neighbors to report suspicious activity or crimes without fear of retaliation.</li> <li><strong>Clean up</strong> the neighborhood! Involve everyone - teens, children, senior citizens. Litter, abandoned cars, and run-down buildings tell criminals that you don't care about where you live or each other. Call the city public works department and ask for help in cleaning up. </li> <li><strong> Ask</strong> local officials to use new ways to get criminals out of your building or neighborhood. These include enforcing anti-noise laws, housing codes, health and fire codes, anti-nuisance laws, and drug-free clauses in rental leases. </li> <li><strong> Work</strong> with schools to establish drug-free, gun-free zones; work with recreation officials to do the same for parks. </li> <li><strong> Develop and share</strong> a phone list of local organizations that can provide counseling, job training, guidance, and other services that neighbors might need. </li> <li><strong> Report</strong> a crime if you witness it or something you suspect might be a crime. Agree to testify if needed. </li> <li><strong> Learn</strong> about hotlines, crisis centers, and other help available to victims of crime. Find out how you can help those who are touched by violence to recover as quickly and completely as possible. </li> <li><strong> Recognize</strong> that it's already your problem if violence is about to erupt in your neighborhood. </li> <li><strong> Consider</strong> an event that lets children turn in weapons, especially those that might be mistaken for real firearms, in exchange for public thank-yous, donated non-violent toys, books, or coupons from local merchants.</li> <li><strong> Start</strong> a discussion of neighborhood views on weapons in the home, use of toy weapons by children in play, children and violent entertainment, and how arguments should be settled. </li> <li><strong> Learn</strong> your state and local laws on firearms. Insist that these laws be enforced vigorously but fairly. Support police, prosecutors, judges, and other local officials who enforce laws designed to prevent gun violence. </li><br />
-						 <br />
- <li><strong> Emphasize</strong> prevention as the preferred way to deal with violence. Ask what schools, law enforcement agencies, public health agencies, libraries, workplaces, religious institutions, child protective agencies, and others are doing to prevent, not just react to, violence. What policies do they have to prevent weapons-related violence? How can they help the community? </li> <li><strong> Volunteer</strong> to mentor young people who need positive support from adults. Programs ranging from Big Brothers and Big Sisters to Adopt-a-School include mentoring as a central ingredient. </li> <li><strong> Talk</strong> with children in the neighborhood about what worries or scares them and about where and how they have felt threatened by violence. Interview teachers, school staff, crossing guards, and bus aides. </li> <li><strong> Promote</strong> public service advertising that offers anti-violence programs and services. Get several groups to cooperate in this effort. Include programs to help kids headed for trouble. </li> <li><strong> Protect</strong> domestic violence victims (and their children) through policies as well as laws that offer them prompt and meaningful response to calls for help and appropriate legal recourse. </li> <li><strong> Organize</strong> to help clean and repair the parks and to report suspicious and illegal activity to the police. Well-kept play equipment and organized activities can attract people back to the parks in large enough numbers to discourage illegal activities. Residents should insist that local government maintain parks, immediately repairing vandalism or other damage. </li> un</div>
-			</div>
-			</section>
+											<P><ol><li ><p class="name"><strong>Work</strong> with public agencies and other organizations -- neighborhood-based or community-wide -- on solving common problems. </p></li> <li><strong> Make </strong> sure that all the youth in the neighborhood have positive ways to spend their spare time, through organized recreation, tutoring programs, part-time work, and volunteer opportunities. </li> <li><strong> Set up</strong> a <a href='http://www.ncpc.org/cms/cms-upload/ncpc/files/orgz.pdf'>Neighborhood Watch</a> or a community patrol, working with police. Make sure your streets and homes are well lighted. </li> <li><strong> Build </strong> a partnership with police, focused on solving problems instead of reacting to crises. Make it possible for neighbors to report suspicious activity or crimes without fear of retaliation.</li> <li><strong>Clean up</strong> the neighborhood! Involve everyone - teens, children, senior citizens. Litter, abandoned cars, and run-down buildings tell criminals that you don't care about where you live or each other. Call the city public works department and ask for help in cleaning up. </li> <li><strong> Ask</strong> local officials to use new ways to get criminals out of your building or neighborhood. These include enforcing anti-noise laws, housing codes, health and fire codes, anti-nuisance laws, and drug-free clauses in rental leases. </li> <li><strong> Work</strong> with schools to establish drug-free, gun-free zones; work with recreation officials to do the same for parks. </li> <li><strong> Develop and share</strong> a phone list of local organizations that can provide counseling, job training, guidance, and other services that neighbors might need. </li> <li><strong> Report</strong> a crime if you witness it or something you suspect might be a crime. Agree to testify if needed. </li> <li><strong> Learn</strong> about hotlines, crisis centers, and other help available to victims of crime. Find out how you can help those who are touched by violence to recover as quickly and completely as possible. </li> <li><strong> Recognize</strong> that it's already your problem if violence is about to erupt in your neighborhood. </li> <li><strong> Consider</strong> an event that lets children turn in weapons, especially those that might be mistaken for real firearms, in exchange for public thank-yous, donated non-violent toys, books, or coupons from local merchants.</li> <li><strong> Start</strong> a discussion of neighborhood views on weapons in the home, use of toy weapons by children in play, children and violent entertainment, and how arguments should be settled. </li> <li><strong> Learn</strong> your state and local laws on firearms. Insist that these laws be enforced vigorously but fairly. Support police, prosecutors, judges, and other local officials who enforce laws designed to prevent gun violence. </li><br />
+												<br />
+												<li><strong> Emphasize</strong> prevention as the preferred way to deal with violence. Ask what schools, law enforcement agencies, public health agencies, libraries, workplaces, religious institutions, child protective agencies, and others are doing to prevent, not just react to, violence. What policies do they have to prevent weapons-related violence? How can they help the community? </li> <li><strong> Volunteer</strong> to mentor young people who need positive support from adults. Programs ranging from Big Brothers and Big Sisters to Adopt-a-School include mentoring as a central ingredient. </li> <li><strong> Talk</strong> with children in the neighborhood about what worries or scares them and about where and how they have felt threatened by violence. Interview teachers, school staff, crossing guards, and bus aides. </li> <li><strong> Promote</strong> public service advertising that offers anti-violence programs and services. Get several groups to cooperate in this effort. Include programs to help kids headed for trouble. </li> <li><strong> Protect</strong> domestic violence victims (and their children) through policies as well as laws that offer them prompt and meaningful response to calls for help and appropriate legal recourse. </li> <li><strong> Organize</strong> to help clean and repair the parks and to report suspicious and illegal activity to the police. Well-kept play equipment and organized activities can attract people back to the parks in large enough numbers to discourage illegal activities. Residents should insist that local government maintain parks, immediately repairing vandalism or other damage. </li> un</div>
+											</div>
+										</section>
 
-			<br />
-			<hr>
+										<br />
+										<hr>
 
-			<section id="five" class="main style2 special">
-				<div class="container" align="middle" style="position:static;">
-					<header class="major">
+										<section id="five" class="main style2 special">
+											<div class="container" align="middle" style="position:static;">
+												<header class="major">
 
-						<h1>Crime Map Of ACT</h1>
+													<h1>Crime Map Of ACT</h1>
 
-					</header>
+												</header>
 
-						<iframe src="https://www.google.com/maps/d/embed?mid=1AFAXc1GfYxVmsXZMTgubQOyaxK8" width="900" height="900"></iframe>
-
-
-						<br />
-						<p>Click On a pointer to see how many crimes in 2017</p>
-						<br />
-						<br />
+												<iframe src="https://www.google.com/maps/d/embed?mid=1AFAXc1GfYxVmsXZMTgubQOyaxK8" width="900" height="900"></iframe>
 
 
-		</div>
-			</section>
+												<br />
+												<p>Click On a pointer to see how many crimes in 2017</p>
+												<br />
+												<br />
 
 
-		<!-- Footer -->
-		<!-- Scripts -->
+											</div>
+										</section>
 
-<section id="four" class="main style1 special">
-	<div class="container" align="middle" style="position:static;">
-
-	<h2><strong>Here Couple of Graphs about Common Crimes in ACT</strong></h2>
-
-	<hr>
+										<section id="one" class="main  style1 special">
+											<div class="container" align="middle" style="position:static;">
 
 
-	<span class="image fit "><img src="images/imagelol.png" alt="" /></span>
-	<br \>
-	<hr>
-	<span class="image fit"><img src="images/imagelol2.png" alt="" /></span>
+												<h1><strong>Unity 3D Data Reprentation<strong></h1><br />
+													<p>Green Dots represent 2017 and Purple Dots represents 2016<br />
+														Intensity of thier colour Describes the seriousness of Crimes
+														1 Ball = 50-100 Crimes<br />
+														<br />
+														Press ESC to leave
+													</p>
 
-</div>
+													<br />
 
-</section>
-		  </script>
-		  <script src="assets/js/markerclusterer.js">
-		  </script>
-		  <script async defer
-		  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDknkwHluVvuSIyHUTiTCFAKHTNP6c5CoA&callback=initMap">
-		  </script>
-		  <script src="https://d3js.org/d3.v4.min.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
 
-		<!-- <script src="node_modules/chart.js/dist/Chart.bundle.js"></script>
-			<script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script> -->
-			<script src="node_modules/chartjs/dist/Chart.js"></script>
-			<script src="node_modules/chartjs/dist/Chart.min.js"></script>
-	</body>
-</html>
+													<div class="webgl-content">
+														<div id="gameContainer" style="width: 960px; height: 600px"></div>
+														<div class="footer">
+															<div class="webgl-logo"></div>
+															<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+															<div class="title">Cristat</div>
+														</div>
+													</div>
+
+													Weston Creek
+													North Canberra
+
+
+
+
+
+												</div>
+											</section>
+
+											<!-- Section End -->
+
+
+
+											<section id="four" class="main style1 special">
+												<div class="container" align="middle" style="position:static;">
+
+													<h2><strong>Here Couple of Graphs about Common Crimes in ACT</strong></h2>
+
+													<hr>
+
+
+													<span class="image fit "><img src="images/imagelol.png" alt="" /></span>
+													<br \>
+													<hr>
+													<span class="image fit"><img src="images/imagelol2.png" alt="" /></span>
+
+												</div>
+
+											</section>
+
+
+
+
+
+											<section id="one" class="main  style1 special">
+												<div class="container" align="middle" style="position:static;">
+
+
+
+
+
+
+													</div>
+												</section>
+
+										</script>
+										<script src="assets/js/markerclusterer.js">
+										</script>
+										<script async defer
+										src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDknkwHluVvuSIyHUTiTCFAKHTNP6c5CoA&callback=initMap">
+										</script>
+										<script src="https://d3js.org/d3.v4.min.js"></script>
+										<script src="assets/js/jquery.min.js"></script>
+										<script src="assets/js/jquery.scrolly.min.js"></script>
+										<script src="assets/js/skel.min.js"></script>
+										<script src="https://d3js.org/d3.v4.min.js"></script>
+										<script src="assets/js/util.js"></script>
+										<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+										<script src="assets/js/main.js"></script>
+
+										<!-- <script src="node_modules/chart.js/dist/Chart.bundle.js"></script>
+										<script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script> -->
+										<script src="node_modules/chartjs/dist/Chart.js"></script>
+										<script src="node_modules/chartjs/dist/Chart.min.js"></script>
+									</body>
+									</html>
